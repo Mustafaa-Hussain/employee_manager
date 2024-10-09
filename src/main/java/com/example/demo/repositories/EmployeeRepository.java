@@ -13,9 +13,9 @@ public interface EmployeeRepository {
 
     List<Employee> findAll();
 
-    Employee create(Employee employee);
+    int create(Employee employee);
 
-    Employee update(Employee newEmployee);
+    int update(Employee newEmployee, Long id);
 
     void delete(Long id);
 }
