@@ -1,7 +1,7 @@
-package com.example.demo.mapper;
+package com.example.demo.using_dbJDBC_core.mapper;
 
 
-import com.example.demo.entities.Employee;
+import com.example.demo.using_dbJDBC_core.entities.Employee;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

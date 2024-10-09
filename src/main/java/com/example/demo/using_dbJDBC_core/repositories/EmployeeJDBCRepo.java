@@ -1,7 +1,7 @@
-package com.example.demo.repositories;
+package com.example.demo.using_dbJDBC_core.repositories;
 
-import com.example.demo.entities.Employee;
-import com.example.demo.mapper.EmployeeMapper;
+import com.example.demo.using_dbJDBC_core.entities.Employee;
+import com.example.demo.using_dbJDBC_core.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;

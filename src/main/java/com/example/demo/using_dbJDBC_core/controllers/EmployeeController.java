@@ -1,7 +1,7 @@
-package com.example.demo.controllers;
+package com.example.demo.using_dbJDBC_core.controllers;
 
-import com.example.demo.entities.Employee;
-import com.example.demo.repositories.EmployeeRepository;
+import com.example.demo.using_dataJDBC.entities.Employee;
+import com.example.demo.using_dbJDBC_core.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
