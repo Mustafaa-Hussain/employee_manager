@@ -15,6 +15,20 @@ public class VV_EmployeeController {
     @Autowired
     private VV_EmployeeRepository employeeRepo;
 
+    @GetMapping("/count")
+    public ResponseEntity findEmployeeCount(){
+        return ResponseEntity.ok(employeeRepo.count());
+    }
+
+    @GetMapping("/filter/name/{name}")
+    public ResponseEntity findEmployeeByName(@PathVariable String name){
+        try {
+            return ResponseEntity.ok(employeeRepo.findByNameContainsIgnoreCase(name));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage().toString());
+        }
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity findEmployeeById(@PathVariable Long id) {
         try {
