@@ -1,6 +1,6 @@
-package com.example.demo.using_dataJDBC.repositories;
+package com.example.employee_manager.using_dataJDBC.repositories;
 
-import com.example.demo.using_dataJDBC.entities.Employee;
+import com.example.employee_manager.using_dataJDBC.entities.Employee;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

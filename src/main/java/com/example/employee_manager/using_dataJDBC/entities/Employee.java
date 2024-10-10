@@ -1,4 +1,4 @@
-package com.example.demo.using_dataJDBC.entities;
+package com.example.employee_manager.using_dataJDBC.entities;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

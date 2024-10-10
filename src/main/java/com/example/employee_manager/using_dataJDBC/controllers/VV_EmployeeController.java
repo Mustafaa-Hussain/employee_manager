@@ -1,7 +1,7 @@
-package com.example.demo.using_dataJDBC.controllers;
+package com.example.employee_manager.using_dataJDBC.controllers;
 
-import com.example.demo.using_dataJDBC.entities.Employee;
-import com.example.demo.using_dataJDBC.repositories.VV_EmployeeRepository;
+import com.example.employee_manager.using_dataJDBC.entities.Employee;
+import com.example.employee_manager.using_dataJDBC.repositories.VV_EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

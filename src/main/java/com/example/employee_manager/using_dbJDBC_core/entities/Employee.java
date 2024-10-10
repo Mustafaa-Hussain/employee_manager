@@ -1,4 +1,4 @@
-package com.example.demo.using_dbJDBC_core.entities;
+package com.example.employee_manager.using_dbJDBC_core.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

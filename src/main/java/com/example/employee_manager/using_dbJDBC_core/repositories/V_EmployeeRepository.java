@@ -1,6 +1,6 @@
-package com.example.demo.using_dbJDBC_core.repositories;
+package com.example.employee_manager.using_dbJDBC_core.repositories;
 
-import com.example.demo.using_dbJDBC_core.entities.Employee;
+import com.example.employee_manager.using_dbJDBC_core.entities.Employee;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
