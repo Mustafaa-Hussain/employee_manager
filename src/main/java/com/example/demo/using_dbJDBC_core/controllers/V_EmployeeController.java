@@ -1,20 +1,19 @@
 package com.example.demo.using_dbJDBC_core.controllers;
 
-import com.example.demo.using_dataJDBC.entities.Employee;
-import com.example.demo.using_dbJDBC_core.repositories.EmployeeRepository;
+import com.example.demo.using_dbJDBC_core.entities.Employee;
+import com.example.demo.using_dbJDBC_core.repositories.V_EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
-@RequestMapping("/employee")
-public class EmployeeController {
+@RequestMapping("/api/v1/employee")
+public class V_EmployeeController {
 
     @Autowired
-    private EmployeeRepository employeeRepo;
+    private V_EmployeeRepository employeeRepo;
 
     @GetMapping("/count")
     public ResponseEntity getCount() {

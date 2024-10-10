@@ -1,9 +1,8 @@
 package com.example.demo.using_dbJDBC_core.repositories;
 
 import com.example.demo.using_dbJDBC_core.entities.Employee;
-import com.example.demo.using_dbJDBC_core.mapper.EmployeeMapper;
+import com.example.demo.using_dbJDBC_core.mapper.V_EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class EmployeeJDBCRepo implements EmployeeRepository {
+public class V_EmployeeJDBCRepo implements V_EmployeeRepository {
     @Autowired
     private NamedParameterJdbcTemplate jdbcTemplate;
 
@@ -24,12 +23,12 @@ public class EmployeeJDBCRepo implements EmployeeRepository {
     public Employee findById(long id) {
         return (Employee) jdbcTemplate.queryForObject("select * from employee where id = :id;",
                 new MapSqlParameterSource("id", id),
-                new EmployeeMapper());
+                new V_EmployeeMapper());
     }
 
     @Override
     public List<Employee> findAll() {
-        return jdbcTemplate.query("select * from employee;", new EmployeeMapper());
+        return jdbcTemplate.query("select * from employee;", new V_EmployeeMapper());
     }
 
     @Override

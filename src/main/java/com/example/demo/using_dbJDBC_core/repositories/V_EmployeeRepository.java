@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface EmployeeRepository {
+public interface V_EmployeeRepository {
     Integer count();
 
     Employee findById(long id);
