@@ -2,6 +2,7 @@ package com.example.employee_manager.using_dataJDBC.controllers;
 
 import com.example.employee_manager.using_dataJDBC.entities.Employee;
 import com.example.employee_manager.using_dataJDBC.repositories.VV_EmployeeRepository;
+import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/v2/employee")
 public class VV_EmployeeController {
+
     @Autowired
     private VV_EmployeeRepository employeeRepo;
 
@@ -20,8 +22,8 @@ public class VV_EmployeeController {
         return ResponseEntity.ok(employeeRepo.count());
     }
 
-    @GetMapping("/filter/name/{name}")
-    public ResponseEntity findEmployeeByName(@PathVariable String name){
+    @GetMapping("/filter/name")
+    public ResponseEntity findEmployeeByName(@PathParam("name") String name){
         try {
             return ResponseEntity.ok(employeeRepo.findByNameContainsIgnoreCase(name));
         } catch (Exception e) {
